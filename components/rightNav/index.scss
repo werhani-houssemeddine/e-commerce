@@ -1,0 +1,91 @@
+@import '../../css/variables';
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+nav{
+    margin: $mainMargin;
+    padding: $mainPadding 10px;
+    height: calc(100vh - $mainMargin*2);
+    border-radius: 20px;
+    box-shadow: $shadow1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    header{
+        display: flex;
+        justify-content: space-around;
+
+        .message, .notifi{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+
+        }
+
+        @keyframes move{
+            0%{
+                transform: rotate(-25deg);
+            }50%{
+                transform: rotate(0deg);
+            }100%{
+                transform: rotate(25deg);
+            }
+        }
+
+        .move{
+            animation: move 1.2s linear infinite alternate-reverse;
+        }
+
+        .mode{
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            padding: 0px 4px;
+            height: 32px;
+            background-color: lighten(rgba(0, 0, 0, 0.2), 70);
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            position: relative;
+
+            div{
+                width: 28px;
+                height: 28px;
+                z-index: 1;
+            }
+
+            .chose{
+                position: absolute;
+                background-color: white;
+                z-index: 0;
+                border-radius: 50%;
+            }
+
+            .left{
+                left: 31px;
+                transition: 1s;
+            }
+
+        }
+    }
+
+    svg{
+        color: rgba(0, 0, 0, 0.7)
+    }
+
+    footer{
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        padding: $mainPadding;
+        margin: 0 $mainMargin;
+        flex-grow: 1;
+        border-radius: 20px;
+    }
+}

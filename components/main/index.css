@@ -1,0 +1,81 @@
+:root {
+  --nav-width: 250px;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+}
+
+main {
+  position: relative;
+}
+main header {
+  width: 100%;
+  height: 55px;
+  padding: 10px;
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+main header .searchBar {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  width: 70%;
+  min-width: 500px;
+  height: 30px;
+}
+main header .searchBar svg {
+  cursor: pointer;
+  color: gray;
+}
+main header .searchBar input {
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  padding: 5px;
+  margin: 1px;
+  width: -webkit-fill-available;
+  height: 100%;
+}
+main header .searchBar input::-moz-placeholder {
+  padding: 0 10px;
+  color: #b3b3b3;
+}
+main header .searchBar input:-ms-input-placeholder {
+  padding: 0 10px;
+  color: #b3b3b3;
+}
+main header .searchBar input::placeholder {
+  padding: 0 10px;
+  color: #b3b3b3;
+}
+main main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+  margin-top: 10px;
+  justify-content: center;
+}
+main main small-prod {
+  height: 300px;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding: 5px;
+  border-radius: 15px;
+}/*# sourceMappingURL=index.css.map */

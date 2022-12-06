@@ -1,0 +1,42 @@
+:root {
+  --nav-width: 250px;
+}
+
+:host {
+  transition: width 2s ease-in-out;
+}
+
+.logo {
+  justify-content: center;
+}
+
+.arrow {
+  transform: rotate(180deg);
+  transition: 2s ease-in-out;
+}
+
+span:not(.information span), p, .more {
+  display: none;
+}
+
+main {
+  margin-top: 10px;
+}
+main div:hover {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+  padding-right: 0;
+}
+main div:hover span {
+  display: inline-block;
+}
+main div:hover .info:not(:empty) {
+  position: relative !important;
+}
+
+.information {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}/*# sourceMappingURL=clicked.css.map */

@@ -1,0 +1,58 @@
+@import '../../css/variables';
+
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$primaryColor : black;
+
+:host{
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    height: 55px;
+}
+    
+    header{
+        padding: 10px;
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid rgba(0 0 0 / 20%);
+
+        .searchBar{
+            display: flex;
+            align-items: center;
+            border-radius: 7px;
+            //box-shadow: 0 0px 3px rgba(0 0 0 / 20%);
+            border: 1.5px solid rgba(0 0 0 / 20%);
+            padding: 0 10px;
+            width: 70%;
+            min-width: 500px;
+            height: 30px;
+
+            svg{
+                cursor: pointer;
+                color: lighten($primaryColor, 50%)
+            }
+
+            input{
+                border: none;
+                outline: none;
+                font-size: 1.1em;
+                padding: 5px;
+                margin: 1px;
+                width: -webkit-fill-available;
+                height: 100%;
+
+                &::placeholder{
+                    padding: 0 10px;
+                    color: lighten($primaryColor, 70)
+                }
+            }
+        }
+    }

@@ -1,0 +1,36 @@
+body{
+    display: flex;
+    gap: 20px;
+}
+
+my-nav{
+    width: var(--nav-width);
+    min-width: var(--nav-width);
+    transition: 2s ease-in-out;
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    z-index: 1;
+    left: 0;
+}
+
+my-right-nav{
+    --nav-width: 250px;
+    width: var(--nav-width);
+    min-width: var(--nav-width);
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    left: 100%;
+}
+
+main{
+    flex-grow: 1;
+}
+
+main-element{
+    min-width: 600px;
+    margin: $mainMargin 0;
+    padding: 10px;
+    //box-shadow: $shadow1;
+}

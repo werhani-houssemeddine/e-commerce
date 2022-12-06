@@ -1,0 +1,72 @@
+:root {
+  --nav-width: 250px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  width: calc(100vw - 20px);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+header img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  max-width: 70px;
+  margin-left: 20px;
+  padding: 5px;
+}
+header .links {
+  flex-grow: 1;
+  margin-right: 40px;
+}
+header ul {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  font-size: 1.5rem;
+  justify-content: end;
+}
+header ul li {
+  list-style: none;
+  padding: 0 30px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+header ul li:hover:not(.formulaire li) {
+  color: #ff4400;
+  transform: scale(1.7);
+  transition: 1s;
+}
+header ul .sign {
+  color: #ff4400;
+  border: 1px solid #ff4400;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+header ul .sign:hover {
+  background-color: #ff4400;
+  color: white;
+  transition: 1s;
+}
+header ul .login {
+  padding: 10px 30px;
+  border-radius: 15px;
+  background-color: #ff4400;
+  color: white;
+}
+header ul .login:hover {
+  background-color: #ff8f66;
+}/*# sourceMappingURL=index.css.map */

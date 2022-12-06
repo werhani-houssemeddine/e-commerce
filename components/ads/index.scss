@@ -1,0 +1,56 @@
+@import '../../css/variables';
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+aside{
+    margin: $mainMargin;
+    border: 2px dotted rgba(0 0 0 /.2);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: lighten(rgba(0 0 0 /.2), 80);
+    color: rgba(0 0 0 / 0.5);
+    height: 75px;
+    cursor: pointer;
+
+    &:hover{
+        transform: scale(1.04);
+        transition: 0.5s;
+
+        .close{
+            opacity: 1;
+            transition: 1s;
+        }
+    }
+
+    .close{
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        cursor: pointer;
+        opacity: 0;
+    }
+
+    .content{
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    img{
+        object-fit: cover;
+        object-position: center;
+        width: clamp(150px, 175px, 200px);
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+}

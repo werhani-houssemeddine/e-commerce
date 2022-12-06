@@ -1,0 +1,79 @@
+@import '../../css/variables' ;
+
+$mainColor: #ff4400;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: calc(100vw - $mainMargin*2);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: $mainMargin;
+    box-shadow: 0 0 10px rgba(0 0 0 /0.2);
+    border-radius: 10px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        max-width: 70px;
+        margin-left: $mainMargin * 2;
+        padding: 5px;
+    }
+    
+    .links{
+        flex-grow: 1;
+        margin-right: $mainMargin*4;
+    }
+
+    ul{
+        display: flex;
+        height: 100%;
+        align-items: center;
+        font-size: $fontSize;
+        justify-content: end;
+
+        li{
+            list-style: none;
+            padding: 0 $mainPadding*1.5;
+            margin: 0 $mainMargin;
+            cursor: pointer;
+
+            &:hover:not(.formulaire li){
+                color: $mainColor;
+                transform: scale(1.7);
+                transition: 1s;
+            }
+        }
+
+
+        .sign{
+            color: $mainColor;
+            border: 1px solid $mainColor;
+            padding: 10px $mainPadding;
+            border-radius: 15px;
+
+            &:hover{
+                background-color: $mainColor;
+                color: white;
+                transition: 1s;
+            }
+        }
+
+        .login{
+            padding: 10px $mainPadding+10px;
+            border-radius: 15px;
+            background-color: $mainColor;
+            color: white;
+
+            &:hover{
+                background-color: lighten($mainColor, 20);
+            }
+        }
+    }
+}

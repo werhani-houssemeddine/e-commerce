@@ -1,0 +1,9 @@
+:root {
+  --nav-width: 250px;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}/*# sourceMappingURL=index.css.map */

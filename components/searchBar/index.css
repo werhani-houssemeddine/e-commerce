@@ -1,0 +1,62 @@
+:root {
+  --nav-width: 250px;
+}
+
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:host {
+  display: block;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 55px;
+}
+
+header {
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+header .searchBar {
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  padding: 0 10px;
+  width: 70%;
+  min-width: 500px;
+  height: 30px;
+}
+header .searchBar svg {
+  cursor: pointer;
+  color: gray;
+}
+header .searchBar input {
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  padding: 5px;
+  margin: 1px;
+  width: -webkit-fill-available;
+  height: 100%;
+}
+header .searchBar input::-moz-placeholder {
+  padding: 0 10px;
+  color: #b3b3b3;
+}
+header .searchBar input:-ms-input-placeholder {
+  padding: 0 10px;
+  color: #b3b3b3;
+}
+header .searchBar input::placeholder {
+  padding: 0 10px;
+  color: #b3b3b3;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,202 @@
+@import '../../css/variables';
+
+*, *::after, *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:host{
+    display: block;
+    transition: width 2s ease-in-out;
+}
+
+nav{
+    height: calc(100vh - $mainMargin*2);
+    position: relative;
+    padding: 10px;
+    margin: $mainMargin;
+    border-radius: 20px;
+    box-shadow: $shadow1;
+    display: flex;
+    flex-direction: column;
+
+    header{
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .logo{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+
+            img{
+                object-fit: cover;
+                object-position: center;
+                width: clamp(30px, 100%, 40px);
+                border-radius: 50%;
+                padding: 1px;
+                border: 1px solid rgba(0 0 0 / 0.6);
+            }
+
+            span{
+                cursor:default;
+                font-size: 1.5rem;
+                color: $primaryColor;
+            }
+        }
+
+        .arrow{
+            position: absolute;
+            left: 95%;
+            background-color: #fff;
+            z-index: 1;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            box-shadow: $shadow1;
+            display: grid;
+            place-items: center;
+            cursor: pointer;
+            transition: 2s;
+        }
+    }
+
+    main{
+        display: flex;
+        flex-grow: 1;
+        /* place-content: space-evenly; */
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 20px;
+
+        p{
+            margin-top: $mainMargin*2;
+            padding: 5px;
+            font-size: 1.1em;
+            color: rgba(0 0 0 / 0.6);
+            font-style: italic;
+        }
+
+        div{
+            display: flex;
+            place-items: center;
+            justify-content: flex-start;
+            cursor: pointer;
+            gap: 20px;
+            padding: 5px 10px;
+            border-radius: 20px;
+
+            &:hover{
+                background-color: lighten($primaryColor, 28);
+            }
+
+            svg{
+                color: rgba(0 0 0 / 0.6);
+            }
+
+            span{
+                font-size: 0.8em;
+                color: rgb(139, 136, 136);
+            }
+
+            .info:not(:empty){
+                flex-grow: 1;
+                text-align: right;
+                position: absolute;
+                right: 5%;
+                border-radius: 50%;
+                padding: 0.3em 0.6em;
+                background-color: lighten($primaryColor, 20);
+                color: black;
+                margin-right: 4px;
+            }
+            
+        }
+    }
+
+    footer{
+        border-top: 1px solid rgba(0 0 0 / 0.6);
+        padding-top: $mainPadding;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        position: relative;
+
+        .user{
+            border: 2px solid darken($primaryColor, 10);
+            width: min-content;
+            border-radius: 50%;
+        }
+
+        img{
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            display: grid;
+            place-items: center;
+            margin: 1px;
+        }
+
+        article{
+            display: grid;
+            justify-items: center;
+            font-size: 0.7rem;
+
+            .name{
+                font-weight: bold;
+                line-height: 200%;
+            }
+
+            .job{
+                color: rgb(139, 136, 136);
+                font-size: 1.2em
+            }
+        }
+
+        .more{
+            cursor: pointer;
+        }
+
+        .information{
+            position: absolute;
+            box-shadow: $shadow1;
+            border-radius: 20px;
+            padding: $mainPadding 10px;
+            bottom: 90%;
+            width: max-content;
+            left: 10%;
+            background-color: white;
+
+            &:hover{
+                transform: scale(1) !important;
+            }
+
+            div{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin: 5px;
+                cursor: pointer;
+                color: darken(rgb(139, 136, 136), 40%);
+
+                &:hover{
+                    background-color: lighten($primaryColor, 28);
+                    border-radius: 10px;
+                    padding: 2px 5px 2px 0;
+                }
+            }
+        }
+
+        [is-hide='true']{
+            transform: scale(0);
+            transition: 2s;
+        }
+
+        [is-hide='false']{
+            transform: scale(1);
+            transition: 2s;
+        }
+    }
+}

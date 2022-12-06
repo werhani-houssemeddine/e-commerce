@@ -1,0 +1,41 @@
+@import '../../css/variables';
+
+
+:host{
+    transition: width 2s ease-in-out;
+}
+
+.logo{
+    justify-content: center; 
+}
+
+.arrow{
+    transform: rotate(180deg);
+    transition: 2s ease-in-out;
+}
+
+span:not(.information span), p, .more{
+    display: none;
+}
+main{
+    margin-top: $mainMargin;
+
+    div{
+        &:hover{
+            width: max-content !important;
+            padding-right: 0;
+            
+            span{
+                display: inline-block;
+            }
+
+            .info:not(:empty){
+                position: relative !important;
+            }
+        }
+    }
+}
+
+.information{
+    width: max-content !important;
+}

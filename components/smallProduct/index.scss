@@ -1,0 +1,64 @@
+@import '../../css/variables';
+
+*, *::after , *::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:host{
+    display: block;
+}
+
+.product{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    img{
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        border-radius: 20px;
+    }
+
+    figcaption{
+        font-weight: bold;
+        cursor: default;
+
+        p{
+            font-size: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: horizontal;
+        }
+    }
+
+    section{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .price{
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: default;
+
+            &::after{
+                content: ' £';
+            }
+        }
+
+        .seeMore{
+            padding: 10px 15px;
+            background-color: rgb(88, 145, 255);
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+    }
+}
